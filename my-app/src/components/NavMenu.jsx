@@ -4,10 +4,11 @@ import { useState } from 'react';
 
 function NavMenu() {
   const [visible, setVisible] = useState(false);
- const burgerClick = () => setVisible(!visible);
-  return  ( <nav className="main__nav nav">
+  const burgerClick = () => setVisible(!visible);
+  return (<nav className="main__nav nav">
     <div className="nav__logo logo">
-      <img className="logo__image" src="../components/logo.png" alt="logo" />
+      
+      <a href="#"><img src={logo} alt="" /></a>
     </div>
     <div className="nav__burger burger" onClick={burgerClick}>
       <span className="burger__line"></span>
@@ -30,7 +31,7 @@ function NavMenu() {
     )}
   </nav>
 
-    );
+  );
 }
 
 export default NavMenu;

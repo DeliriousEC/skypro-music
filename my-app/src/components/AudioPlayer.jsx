@@ -1,6 +1,6 @@
 import './AudioPlayer.css'
 
-function AudioPlayer() { 
+function AudioPlayer({isLoading}) { 
     return (
 
 <div className="bar">

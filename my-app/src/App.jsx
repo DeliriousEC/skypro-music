@@ -31,7 +31,7 @@ function App() {
           </div>
           <Sidebar isLoading={isLoading} />
         </main>
-        <AudioPlayer />
+        <AudioPlayer isLoading={isLoading}/>
         <footer className="footer"></footer>
       </div>
     </div>

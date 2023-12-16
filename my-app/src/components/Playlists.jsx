@@ -5,10 +5,18 @@ import playlist03 from "./img/playlist03.png"
 
 function Playlists({isLoading}) {
 
-  
+
   return  (
         <div className="sidebar__block">
               <div className="sidebar__list">
+                {
+                            isLoading ? ([1, 2, 3].map((item) => (
+                              <div className="sidebar__item" key={item}>
+                              <div className="skeleton__playlist"></div>
+                            </div>
+                            ))
+                          ) : (
+                              <>
                 <div className="sidebar__item">
                   <a className="sidebar__link" href="#">
                     <img
@@ -33,6 +41,10 @@ function Playlists({isLoading}) {
                       alt="day's playlist" />
                   </a>
                 </div>
+                                </>
+                              )  
+                }
+
               </div>
             </div>
     )

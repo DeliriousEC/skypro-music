@@ -37,7 +37,7 @@ function AudioPlayer({isLoading}) {
       </div>
 {
 isLoading ? ([1].map((item) => (
-  <div className="player__track-play track-play">
+  <div className="player__track-play track-play" key={item}>
   <div className="track-play__contain">
     <div className="track-play__image">
     <div className="skeleton__audio-player"></div>

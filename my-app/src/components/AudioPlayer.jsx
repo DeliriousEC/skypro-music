@@ -35,8 +35,34 @@ function AudioPlayer({isLoading}) {
           </svg>
         </div>
       </div>
+{
+isLoading ? ([1].map((item) => (
+  <div className="player__track-play track-play">
+  <div className="track-play__contain">
+    <div className="track-play__image">
+    <div className="skeleton__audio-player"></div>
+    </div>
+    <div className="track-play__author">
+    <div className="skeleton__audio-player"></div>
+    </div>
+    <div className="track-play__album">
+    <div className="skeleton__audio-player"></div>
+    </div>
+  </div>
 
-      <div className="player__track-play track-play">
+  <div className="track-play__like-dis">
+    <div className="track-play__like _btn-icon">
+    <div className="skeleton__audio-player"></div>
+    </div>
+    <div className="track-play__dislike _btn-icon">
+    <div className="skeleton__audio-player"></div>
+    </div>
+  </div>
+</div>
+                            ))
+                          ) : (
+                              <>
+                                    <div className="player__track-play track-play">
         <div className="track-play__contain">
           <div className="track-play__image">
             <svg className="track-play__svg" alt="music">
@@ -67,6 +93,10 @@ function AudioPlayer({isLoading}) {
           </div>
         </div>
       </div>
+                              </>
+                          )     
+                            }
+      
     </div>
     <div className="bar__volume-block volume">
       <div className="volume__content">

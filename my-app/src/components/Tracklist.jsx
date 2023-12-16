@@ -4,7 +4,7 @@ import './Tracklist.css'
 
 function Tracklist({ isLoading }) {
   return (
-    <div className="centerblock__content">
+    <div className="centerblock__content skeleton__block">
       <div className="content__title playlist-title">
         <div className="playlist-title__col col01">Трек</div>
         <div className="playlist-title__col col02">ИСПОЛНИТЕЛЬ</div>
@@ -17,7 +17,7 @@ function Tracklist({ isLoading }) {
       </div>
       <div className="content__playlist playlist">
         {
-          isLoading ? ([1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
+          isLoading ? ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((item) => (
             <div className="playlist__item" key={item}>
             <div className="playlist__track track">
               <div className="track__title">

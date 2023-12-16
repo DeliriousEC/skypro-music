@@ -5,20 +5,31 @@ import Sidebar from './components/Sidebar.jsx';
 import Tracklist from './components/Tracklist.jsx';
 import Search from './components/Search.jsx';
 import Filters from './components/Filters.jsx';
+import { useState, useEffect } from 'react';
+
 
 function App() {
+
+  const [isLoading, setIsLoading] = useState(false);
+  useEffect(() => {
+    setIsLoading(true)
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 2000);
+  }, [])
+
   return (
     <> <div className="wrapper">
       <div className="container">
         <main className="main">
-         <NavMenu />
+          <NavMenu />
           <div className="main__centerblock centerblock">
             <Search />
             <h2 className="centerblock__h2">Треки</h2>
             <Filters />
-            <Tracklist />
-            </div>
-          <Sidebar />
+            <Tracklist isLoading={isLoading} />
+          </div>
+          <Sidebar isLoading={isLoading} />
         </main>
         <AudioPlayer />
         <footer className="footer"></footer>

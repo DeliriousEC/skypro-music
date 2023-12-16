@@ -1,7 +1,7 @@
 import './Sidebar.css'
 import Playlists from './Playlists.jsx';
 
-function Sidebar() {
+function Sidebar({isLoading}) {
     return (
 <div className="main__sidebar sidebar">
             <div className="sidebar__personal">
@@ -12,7 +12,7 @@ function Sidebar() {
                 </svg>
               </div>
             </div>
-            <Playlists />
+            <Playlists isLoading={isLoading} />
           </div>
 
     );

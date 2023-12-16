@@ -253,3 +253,26 @@
     text-align: right;
     color: #696969;
   }
+
+  .skeleton {
+    background-color: #313131;
+    min-width: 30px;
+    height: 20px;
+    animation: changeBackgroundColor 2s infinite;
+  }
+  
+  @keyframes changeBackgroundColor {
+    0% {
+      background-color: #313131;
+    }
+    50% {
+      background-color: #515151;
+    }
+    100% {
+      background-color: #313131;
+    }
+  }
+
+  .skeleton__block {
+    max-width: 1094px;
+  }

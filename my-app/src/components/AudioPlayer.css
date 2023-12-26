@@ -86,6 +86,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    cursor: pointer;
   }
 
   .player__btn-prev {
@@ -277,6 +278,7 @@
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: end;
+    cursor: pointer;
   }
 
   .volume__image {
@@ -293,10 +295,12 @@
 
   .volume__progress {
     width: 109px;
+    cursor: pointer;
   }
 
   .volume__progress-line {
     width: 109px;
+    cursor: pointer;
   }
 
   .skeleton__audio-player {

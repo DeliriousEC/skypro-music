@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import AudioPlayer from './components/AudioPlayer.jsx';
 import NavMenu from './components/NavMenu.jsx';
 import Sidebar from './components/Sidebar.jsx';
@@ -6,6 +6,9 @@ import Tracklist from './components/Tracklist.jsx';
 import Search from './components/Search.jsx';
 import Filters from './components/Filters.jsx';
 import { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import { GlobalStyle } from './App.Styles';
+import * as S from "./App.Styles"
 
 
 function App() {
@@ -19,22 +22,24 @@ function App() {
   }, [])
 
   return (
-    <> <div className="wrapper">
-      <div className="container">
-        <main className="main">
+    <>
+    <GlobalStyle/>
+     <S.Wrapper>
+      <S.Container>
+        <S.Main>
           <NavMenu />
           <div className="main__centerblock centerblock">
             <Search />
-            <h2 className="centerblock__h2">Треки</h2>
+            <S.CenterblockH2>Треки</S.CenterblockH2>
             <Filters />
             <Tracklist isLoading={isLoading} />
           </div>
           <Sidebar isLoading={isLoading} />
-        </main>
-        <AudioPlayer isLoading={isLoading}/>
+        </S.Main>
+        <AudioPlayer isLoading={isLoading} />
         <footer className="footer"></footer>
-      </div>
-    </div>
+      </S.Container>
+    </S.Wrapper>
     </>
 
   );

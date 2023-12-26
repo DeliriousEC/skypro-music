@@ -1,4 +1,6 @@
 import './AudioPlayer.css'
+import * as S from "./AudioPlayer.Styles"
+
 
 function AudioPlayer({isLoading}) { 
     return (

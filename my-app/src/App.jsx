@@ -8,7 +8,7 @@ import Filters from './components/Filters.jsx';
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { GlobalStyle } from './App.Styles';
-import * as S from "./App.Styles"
+import * as S from "./App.Styles.js"
 
 
 function App() {

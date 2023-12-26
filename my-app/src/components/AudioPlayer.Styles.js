@@ -25,7 +25,7 @@ height: 5px;
 background: #2e2e2e;
 `;
 
-export const BarPlayerBLock = styled.div `
+export const BarPlayerBlock = styled.div `
 height: 73px;
 display: -webkit-box;
 display: -ms-flexbox;

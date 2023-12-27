@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const Bar = styled.div `
-position: absolute;
+position: fixed;
 bottom: 0;
 left: 0;
 width: 100%;
@@ -294,19 +294,18 @@ stroke: #696969;
 
 export const VolumeContent = styled.div`
 display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--webkit-box-orient: horizontal;
--webkit-box-direction: normal;
--ms-flex-direction: row;
-flex-direction: row;
--webkit-box-align: center;
--ms-flex-align: center;
-align-items: center;
--webkit-box-pack: end;
--ms-flex-pack: end;
-justify-content: end;
-cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: flex-end;
+  -ms-flex-pack: flex-end;
+  justify-content: flex-end;
 `;
 
 export const VolumeImage = styled.div`
@@ -318,17 +317,15 @@ margin-right: 17px;
 export const VolumeSvg = styled.svg`
 width: 13px;
 height: 18px;
-fill: transparent;
+fill: transparent;?
 `;
 
 export const VolumeProgress = styled.div`
 width: 109px;
-cursor: pointer;
 `;
 
 export const VolumeProgressLine = styled.div`
 width: 109px;
-cursor: pointer;
 `;
 
 export const SkeletonAudioPlayer = styled.div`

@@ -1,6 +1,7 @@
 import { useState } from "react";
+import * as S from "../components/Filters.Styles.js"
 
-import './Filters.css'
+// import './Filters.css'
 import {
   OpenFilterSinger,
   OpenFilterYears,
@@ -15,8 +16,8 @@ function Filters() {
   };
 
   return (
-    <div className="centerblock__filter filter">
-      <div className="filter__title">Искать по:</div>
+    <S.CenterblockFilter>
+      <S.FilterTitle>Искать по:</S.FilterTitle>
       <OpenFilterSinger
         buttonText="исполнителю"
         listItems={[
@@ -58,7 +59,7 @@ function Filters() {
         toggleFilter={() => toggleFilter("жанру")}
         isSelected={true}
       />
-    </div>
+    </S.CenterblockFilter>
   );
 }
 

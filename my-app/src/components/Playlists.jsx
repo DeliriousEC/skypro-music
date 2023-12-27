@@ -1,38 +1,51 @@
-import './Playlists.css'
+
 import playlist01 from "./img/playlist01.png"
 import playlist02 from "./img/playlist02.png"
 import playlist03 from "./img/playlist03.png"
+import * as S from "../components/PlaylistsStyles"
 
-function Playlists() {
-  return  (
-        <div className="sidebar__block">
-              <div className="sidebar__list">
-                <div className="sidebar__item">
-                  <a className="sidebar__link" href="#">
-                    <img
-                      className="sidebar__img"
-                      src={playlist01}
-                      alt="day's playlist" />
-                  </a>
-                </div>
-                <div className="sidebar__item">
-                  <a className="sidebar__link" href="#">
-                    <img
-                      className="sidebar__img"
-                      src={playlist02}
-                      alt="day's playlist" />
-                  </a>
-                </div>
-                <div className="sidebar__item">
-                  <a className="sidebar__link" href="#">
-                    <img
-                      className="sidebar__img"
-                      src={playlist03}
-                      alt="day's playlist" />
-                  </a>
-                </div>
-              </div>
-            </div>
-    )
+
+function Playlists({ isLoading }) {
+
+
+  return (
+    <S.SidebarBlock>
+      <S.SidebarList>
+        {
+          isLoading ? ([1, 2, 3].map((item) => (
+            <S.SidebarItem key={item}>
+              <S.SkeletonPlaylist ></S.SkeletonPlaylist>
+            </S.SidebarItem>
+          ))
+          ) : (
+            <>
+              <S.SidebarItem>
+                <S.SidebarLink href="#">
+                  <S.SidebarImg
+                    src={playlist01}
+                    alt="day's playlist" />
+                </S.SidebarLink>
+              </S.SidebarItem>
+              <S.SidebarItem>
+                <S.SidebarLink href="#">
+                  <S.SidebarImg
+                    src={playlist02}
+                    alt="day's playlist" />
+                </S.SidebarLink>
+              </S.SidebarItem>
+              <S.SidebarItem>
+                <S.SidebarLink href="#">
+                  <S.SidebarImg
+                    src={playlist03}
+                    alt="day's playlist" />
+                </S.SidebarLink>
+              </S.SidebarItem>
+            </>
+          )
+        }
+
+      </S.SidebarList>
+    </S.SidebarBlock>
+  )
 }
 export default Playlists;

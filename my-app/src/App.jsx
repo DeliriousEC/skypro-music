@@ -10,7 +10,6 @@ import styled from 'styled-components';
 import { GlobalStyle } from './App.Styles';
 import * as S from "./App.Styles.js"
 
-
 function App() {
 
   const [isLoading, setIsLoading] = useState(false);

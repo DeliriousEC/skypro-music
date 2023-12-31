@@ -7,9 +7,9 @@ function Sidebar({isLoading}) {
             <S.SidebarPersonal>
               <S.SidebarPersonalName>Maxim.Trankov</S.SidebarPersonalName>
               <S.SidebarIcon>
-                <svg alt="logout">
+                <S.LogoutSvg>
                 <use xlinkHref="./img/icon/sprite.svg#logout"></use>
-                </svg>
+                </S.LogoutSvg>
               </S.SidebarIcon>
             </S.SidebarPersonal>
             <Playlists isLoading={isLoading} />

@@ -35,8 +35,8 @@ body {
   @font-face {
     font-family: "StratosSkyeng";
     src: local("StratosSkyeng"), local("StratosSkyeng"),
-      url("../fonts/StratosSkyeng.woff2") format("woff2"),
-      url("../fonts/StratosSkyeng.woff") format("woff");
+      url(/fonts/"StratosSkyeng.woff2") format("woff2"),
+      url("/fonts/StratosSkyeng.woff") format("woff");
     font-weight: 400;
     font-style: normal;
   }
@@ -118,3 +118,13 @@ export const CenterblockH2 = styled.h2`
   letter-spacing: -0.8px;
   margin-bottom: 45px;
 `;
+
+export const Text = styled.div`
+font-style: normal;
+font-weight: 700;
+font-size: 56px;
+line-height: 24px;
+letter-spacing: 2px;
+color: #fff;
+text-transform: uppercase;
+`;  

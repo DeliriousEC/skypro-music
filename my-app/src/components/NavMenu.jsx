@@ -28,7 +28,7 @@ function NavMenu() {
           <S.NavLink href="#">Мой плейлист</S.NavLink>
         </S.MenuItem>
         <S.MenuItem>
-        <S.Button>Выйти</S.Button>
+        <S.Button >Выйти</S.Button>
         </S.MenuItem>
       </S.MenuList>
     </S.NavMenu>

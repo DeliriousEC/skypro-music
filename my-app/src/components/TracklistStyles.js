@@ -24,7 +24,7 @@ export const ContentTitle = styled.div `
   align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 24px;
 `;
 

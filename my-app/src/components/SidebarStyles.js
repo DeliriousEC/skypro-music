@@ -85,3 +85,8 @@ export const MainSidebar = styled.div`
   max-width: 418px;
   padding: 20px 36px 20px 78px;
 `;
+
+export const LogoutSvg = styled.svg`
+width: 43px;
+height: 43px;
+`;

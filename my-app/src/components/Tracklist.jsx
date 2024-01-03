@@ -55,15 +55,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >Guilt <S.TrackTitleSpan></S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">Nero</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">Nero</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >Welcome Reality</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>
@@ -84,15 +84,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >Elektro <S.TrackTitleSpan></S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">Dynoro, Outwork, Mr. Gee</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">Dynoro, Outwork, Mr. Gee</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >Elektro</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>
@@ -113,15 +113,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >I’m Fire <S.TrackTitleSpan></S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">Ali Bakgor</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">Ali Bakgor</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >I’m Fire</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>
@@ -142,15 +142,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >Non Stop <S.TrackTitleSpan>(Remix)</S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">Стоункат, Psychopatho</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">Стоункат, Psychopatho</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >Non Stop</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>
@@ -171,15 +171,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >Run Run <S.TrackTitleSpan>(feat. AR/CO)</S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">Jaded, Will Clarke, AR/COo</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">Jaded, Will Clarke, AR/COo</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >Run Run</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>
@@ -200,15 +200,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >Eyes on Fire <S.TrackTitleSpan>(Zeds Dead Remix)</S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">Blue Foundation, Zeds Dead</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">Blue Foundation, Zeds Dead</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >Eyes on Fire</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>
@@ -229,15 +229,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >Mucho Bien <S.TrackTitleSpan>(Hi Profile Remix)</S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">HYBIT, Mr. Black, Offer Nissim, Hi Profile</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">HYBIT, Mr. Black, Offer Nissim, Hi Profile</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >Mucho Bien</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>
@@ -258,15 +258,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >Knives n Cherries <S.TrackTitleSpan></S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">minthaze</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">minthaze</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >Captivating</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>
@@ -287,15 +287,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >How Deep Is Your Love <S.TrackTitleSpan></S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">Calvin Harris, Disciples</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">Calvin Harris, Disciples</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >How Deep Is Your Love</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>
@@ -316,15 +316,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >Morena <S.TrackTitleSpan></S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">Tom Boxer</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">Tom Boxer</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >Soundz Made in Romania</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>
@@ -344,15 +344,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >Guilt <S.TrackTitleSpan></S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">Nero</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">Nero</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >Welcome Reality</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>
@@ -373,15 +373,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >Elektro <S.TrackTitleSpan></S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">Dynoro, Outwork, Mr. Gee</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">Dynoro, Outwork, Mr. Gee</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >Elektro</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>
@@ -402,15 +402,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >I’m Fire <S.TrackTitleSpan></S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">Ali Bakgor</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">Ali Bakgor</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >I’m Fire</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>
@@ -431,15 +431,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >Non Stop <S.TrackTitleSpan>(Remix)</S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">Стоункат, Psychopatho</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">Стоункат, Psychopatho</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >Non Stop</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>
@@ -460,15 +460,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >Run Run <S.TrackTitleSpan>(feat. AR/CO)</S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">Jaded, Will Clarke, AR/COo</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">Jaded, Will Clarke, AR/COo</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >Run Run</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>
@@ -489,15 +489,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >Eyes on Fire <S.TrackTitleSpan>(Zeds Dead Remix)</S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">Blue Foundation, Zeds Dead</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">Blue Foundation, Zeds Dead</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >Eyes on Fire</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>
@@ -518,15 +518,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >Mucho Bien <S.TrackTitleSpan>(Hi Profile Remix)</S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">HYBIT, Mr. Black, Offer Nissim, Hi Profile</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">HYBIT, Mr. Black, Offer Nissim, Hi Profile</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >Mucho Bien</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>
@@ -547,15 +547,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >Knives n Cherries <S.TrackTitleSpan></S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">minthaze</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">minthaze</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >Captivating</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>
@@ -576,15 +576,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >How Deep Is Your Love <S.TrackTitleSpan></S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">Calvin Harris, Disciples</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">Calvin Harris, Disciples</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >How Deep Is Your Love</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>
@@ -605,15 +605,15 @@ function Tracklist({ isLoading }) {
                       </S.TrackTitleSvg>
                     </S.TrackTitleImage>
                     <S.TrackTitle>
-                      <S.TrackTitleLink href="http://"
+                      <S.TrackTitleLink href="#"
                       >Morena <S.TrackTitleSpan></S.TrackTitleSpan></S.TrackTitleLink>
                     </S.TrackTitle>
                   </S.TrackTitle>
                   <S.TrackAuthor>
-                    <S.TrackAuthorLink href="http://">Tom Boxer</S.TrackAuthorLink>
+                    <S.TrackAuthorLink href="#">Tom Boxer</S.TrackAuthorLink>
                   </S.TrackAuthor>
                   <S.TrackAlbum>
-                    <S.TrackAlbumLink href="http://"
+                    <S.TrackAlbumLink href="#"
                     >Soundz Made in Romania</S.TrackAlbumLink>
                   </S.TrackAlbum>
                   <S.TrackTime>

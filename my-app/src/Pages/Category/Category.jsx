@@ -16,7 +16,7 @@ export const Category = () => {
       <GlobalStyle />
       <S.Wrapper>
         <S.Container>
-          <S.Text>{`Здесь будет '${title}'`}</S.Text>
+          <S.Text>{title}</S.Text>
         </S.Container>
       </S.Wrapper>
     </>

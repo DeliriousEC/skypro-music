@@ -4,6 +4,7 @@ import AudioPlayer from "../../components/AudioPlayer.jsx";
 import Filters from "../../components/Filters.jsx";
 import NavMenu from "../../components/NavMenu.jsx";
 import Search from "../../components/Search.jsx";
+import Playlists from "../../components/Playlists.jsx";
 import Sidebar from "../../components/Sidebar.jsx";
 import Tracklist from "../../components/Tracklist.jsx";
 import { useState, useEffect } from 'react';

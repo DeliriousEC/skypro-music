@@ -7,12 +7,9 @@ import Search from "../../components/Search.jsx";
 import Sidebar from "../../components/Sidebar.jsx";
 import Tracklist from "../../components/Tracklist.jsx";
 import { useState, useEffect } from 'react';
-import styled from "styled-components";
-import { Favorites } from "../Favorites/index.jsx";
 
+export const Main = ({ }) => {
 
-export const Main = ({}) => {
-    
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true)
@@ -21,20 +18,20 @@ export const Main = ({}) => {
     }, 2000);
   }, [])
 
- return(
+  return (
     <>
-<S.Main>
-          <NavMenu />
-          <div className="main__centerblock centerblock">
-            <Search />
-            <S.CenterblockH2>Треки</S.CenterblockH2>
-            <Filters />
-            <Tracklist isLoading={isLoading} />
-          </div>
-          <Sidebar isLoading={isLoading} />
-        </S.Main>
-        <AudioPlayer isLoading={isLoading} />
-        <footer className="footer"></footer>
-</>
- );
+      <S.Main>
+        <NavMenu />
+        <div className="main__centerblock centerblock">
+          <Search />
+          <S.CenterblockH2>Треки</S.CenterblockH2>
+          <Filters />
+          <Tracklist isLoading={isLoading} />
+        </div>
+        <Sidebar isLoading={isLoading} />
+      </S.Main>
+      <AudioPlayer isLoading={isLoading} />
+      <footer className="footer"></footer>
+    </>
+  );
 };

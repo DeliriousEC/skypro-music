@@ -2,10 +2,17 @@
 import logo from "../components/logo.png"
 import { useState } from 'react';
 import * as S from "../components/NavMenuStyles"
+import { useNavigate } from "react-router-dom";
 
 function NavMenu() {
   const [visible, setVisible] = useState(false);
   const burgerClick = () => setVisible(!visible);
+
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    navigate("/login");
+  };
 
 
   return (<S.MainNav>
@@ -27,7 +34,7 @@ function NavMenu() {
           <S.NavLink to="/Favorites">Мой плейлист</S.NavLink>
         </S.MenuItem>
         <S.MenuItem>
-        <S.Button>Выйти</S.Button>
+        <S.Button onClick={handleLogout}>Выйти</S.Button>
         </S.MenuItem>
       </S.MenuList>
     </S.NavMenu>

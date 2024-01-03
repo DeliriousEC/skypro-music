@@ -1,12 +1,17 @@
 import * as S from "../components/PlaylistsStyles"
 import { Categories } from "../Pages/Category/Categories"
 
-function Playlists({isLoading}) {
+function Playlists({ isLoading }) {
   return  (
         <S.SidebarBlock>
               <S.SidebarList>
-              {Categories.map((category) => { 
-            return (
+              {
+               isLoading ? (Categories.map((category) => (
+              <S.SidebarItem key={category.id}>
+                <S.SkeletonPlaylist ></S.SkeletonPlaylist>
+              </S.SidebarItem>
+              ))
+            ) : (
               <>
               <S.SidebarItem key={category.id}>
                 <S.SidebarLink
@@ -17,10 +22,11 @@ function Playlists({isLoading}) {
                 </S.SidebarLink>
               </S.SidebarItem>
               </>
-              );
-          })}
+              )
+          }
               </S.SidebarList>
             </S.SidebarBlock>
     )
 }
+
 export default Playlists;

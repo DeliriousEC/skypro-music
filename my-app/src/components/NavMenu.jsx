@@ -1,32 +1,47 @@
-import './NavMenu.css'
-import logo from "./logo.png"
+
+import logo from "../components/logo.png"
+import { useState } from 'react';
+import * as S from "../components/NavMenuStyles"
+import { useNavigate } from "react-router-dom";
 
 function NavMenu() {
-  return  ( <nav className="main__nav nav">
-    <div className="nav__logo logo">
-      <img className="logo__image" src={logo} alt="logo" />
-    </div>
-    <div className="nav__burger burger">
-      <span className="burger__line"></span>
-      <span className="burger__line"></span>
-      <span className="burger__line"></span>
-    </div>
-    <div className="nav__menu menu">
-      <ul className="menu__list">
-        <li className="menu__item">
-          <a href="#" className="menu__link">Главное</a>
-        </li>
-        <li className="menu__item">
-          <a href="#" className="menu__link">Мой плейлист</a>
-        </li>
-        <li className="menu__item">
-          <a href="../signin.html" className="menu__link">Войти</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  const [visible, setVisible] = useState(false);
+  const burgerClick = () => setVisible(!visible);
 
-    );
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    navigate("/login");
+  };
+
+
+  return (<S.MainNav>
+    <S.NavLogo>
+      
+    <S.LogoImage src={logo} alt="logo" />
+    </S.NavLogo>
+    <S.NavBurger onClick={burgerClick}>
+      <S.BurgerLine ></S.BurgerLine>
+      <S.BurgerLine ></S.BurgerLine>
+      <span></span>
+    </S.NavBurger>
+    {visible && (<S.NavMenu>
+      <S.MenuList>
+        <S.MenuItem>
+          <S.MenuLink href="#">Главное</S.MenuLink>
+        </S.MenuItem>
+        <S.MenuItem>
+          <S.NavLink to="/Favorites">Мой плейлист</S.NavLink>
+        </S.MenuItem>
+        <S.MenuItem>
+        <S.Button onClick={handleLogout}>Выйти</S.Button>
+        </S.MenuItem>
+      </S.MenuList>
+    </S.NavMenu>
+    )}
+  </S.MainNav>
+
+  );
 }
 
 export default NavMenu;

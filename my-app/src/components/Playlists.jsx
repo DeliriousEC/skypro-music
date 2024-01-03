@@ -1,38 +1,32 @@
-import './Playlists.css'
-import playlist01 from "./img/playlist01.png"
-import playlist02 from "./img/playlist02.png"
-import playlist03 from "./img/playlist03.png"
+import * as S from "../components/PlaylistsStyles"
+import { Categories } from "../Pages/Category/Categories"
 
-function Playlists() {
+function Playlists({ isLoading }) {
   return  (
-        <div className="sidebar__block">
-              <div className="sidebar__list">
-                <div className="sidebar__item">
-                  <a className="sidebar__link" href="#">
-                    <img
-                      className="sidebar__img"
-                      src={playlist01}
-                      alt="day's playlist" />
-                  </a>
-                </div>
-                <div className="sidebar__item">
-                  <a className="sidebar__link" href="#">
-                    <img
-                      className="sidebar__img"
-                      src={playlist02}
-                      alt="day's playlist" />
-                  </a>
-                </div>
-                <div className="sidebar__item">
-                  <a className="sidebar__link" href="#">
-                    <img
-                      className="sidebar__img"
-                      src={playlist03}
-                      alt="day's playlist" />
-                  </a>
-                </div>
-              </div>
-            </div>
+        <S.SidebarBlock>
+              <S.SidebarList>
+              {
+               isLoading ? (Categories.map((category) => (
+              <S.SidebarItem key={category.id}>
+                <S.SkeletonPlaylist ></S.SkeletonPlaylist>
+              </S.SidebarItem>
+              ))
+            ) : (
+              <>
+              <S.SidebarItem key={category.id}>
+                <S.SidebarLink
+                  id={category.id}
+                  to={`/Category/${category.id}`}
+                >
+                  <S.SidebarImg src={category.image} alt={category.alt} />
+                </S.SidebarLink>
+              </S.SidebarItem>
+              </>
+              )
+          }
+              </S.SidebarList>
+            </S.SidebarBlock>
     )
 }
+
 export default Playlists;

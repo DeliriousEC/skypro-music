@@ -8,6 +8,7 @@ import Sidebar from "../../components/Sidebar.jsx";
 import Tracklist from "../../components/Tracklist.jsx";
 import { useState, useEffect } from 'react';
 import styled from "styled-components";
+import { Favorites } from "../Favorites/index.jsx";
 
 
 export const Main = ({}) => {

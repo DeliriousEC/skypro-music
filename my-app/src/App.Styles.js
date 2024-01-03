@@ -128,3 +128,17 @@ letter-spacing: 2px;
 color: #fff;
 text-transform: uppercase;
 `;  
+
+
+export const ContainerLogin = styled.div`
+max-width: 1920px;
+height: 100vh;
+margin: 0 auto;
+position: relative;
+background-color: #181818;
+overflow: scroll;
+display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+`;

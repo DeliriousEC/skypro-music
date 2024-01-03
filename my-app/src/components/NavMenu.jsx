@@ -8,7 +8,6 @@ function NavMenu() {
   const burgerClick = () => setVisible(!visible);
 
 
-
   return (<S.MainNav>
     <S.NavLogo>
       
@@ -25,10 +24,10 @@ function NavMenu() {
           <S.MenuLink href="#">Главное</S.MenuLink>
         </S.MenuItem>
         <S.MenuItem>
-          <S.NavLink href="#">Мой плейлист</S.NavLink>
+          <S.NavLink to="/Favorites">Мой плейлист</S.NavLink>
         </S.MenuItem>
         <S.MenuItem>
-        <S.Button >Выйти</S.Button>
+        <S.Button>Выйти</S.Button>
         </S.MenuItem>
       </S.MenuList>
     </S.NavMenu>

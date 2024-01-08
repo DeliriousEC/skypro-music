@@ -9,7 +9,7 @@ return(
     <GlobalStyle />
     <S.Wrapper>
       <S.Container>
-        <S.Text>Yor favorite songs:</S.Text>
+        <S.Text>Ваши подборки:</S.Text>
         <NavLink to="/Main">
           Назад
         </NavLink>

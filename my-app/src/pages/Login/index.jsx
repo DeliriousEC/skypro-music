@@ -18,7 +18,7 @@ export const Login = ({ setUser }) => {
       <GlobalStyle />
       <S.Wrapper>
         <S.ContainerLogin>
-          <S.Text>Login Page</S.Text>
+          <S.Text>Добро пожаловать!</S.Text>
           <S.Button onClick={onSubmit}>Войти</S.Button>
           <S.NavLinkReg to="/Registration" >Регистрация</S.NavLinkReg>
         </S.ContainerLogin>

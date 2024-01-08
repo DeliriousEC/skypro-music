@@ -1,7 +1,7 @@
-import { createGlobalStyle } from "styled-components";
+import styled, {createGlobalStyle} from "styled-components";
 
-const IndexStyles = createGlobalStyle`
-  body {
+export const IndexStyles = createGlobalStyle`
+body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
       'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
@@ -15,5 +15,3 @@ const IndexStyles = createGlobalStyle`
       monospace;
   }
 `;
-
-export { IndexStyles };

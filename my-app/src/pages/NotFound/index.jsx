@@ -1,8 +1,10 @@
-import * as S from "../PageStyles.js";
-import { GlobalStyle } from "../../App.styles.js";
+import styled from "styled-components";
+import { GlobalStyle } from "../../App.Styles";
+import * as S from "../../App.Styles"
 
 export const NotFound = () => {
-  return (
+
+return(
     <>
       <GlobalStyle />
       <S.Wrapper>
@@ -11,5 +13,5 @@ export const NotFound = () => {
         </S.Container>
       </S.Wrapper>
     </>
-  );
+);
 };

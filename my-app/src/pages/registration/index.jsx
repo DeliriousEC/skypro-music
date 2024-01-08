@@ -1,5 +1,5 @@
-import * as S from "../PageStyles.js";
-import { GlobalStyle } from "../../App.styles.js";
+import * as S from "../../App.Styles.js";
+import { GlobalStyle } from "../../App.Styles.js";
 
 export const Registration = () => {
   return (

@@ -1,19 +1,19 @@
-import './Sidebar.css'
+import * as S from "../components/SidebarStyles.js"
 import Playlists from './Playlists.jsx';
 
-function Sidebar() {
+function Sidebar({isLoading}) {
     return (
-<div className="main__sidebar sidebar">
-            <div className="sidebar__personal">
-              <p className="sidebar__personal-name">Sergey.Ivanov</p>
-              <div className="sidebar__icon">
-                <svg alt="logout">
+<S.MainSidebar>
+            <S.SidebarPersonal>
+              <S.SidebarPersonalName>Maxim.Trankov</S.SidebarPersonalName>
+              <S.SidebarIcon>
+                <S.LogoutSvg>
                 <use xlinkHref="./img/icon/sprite.svg#logout"></use>
-                </svg>
-              </div>
-            </div>
-            <Playlists />
-          </div>
+                </S.LogoutSvg>
+              </S.SidebarIcon>
+            </S.SidebarPersonal>
+            <Playlists isLoading={isLoading} />
+          </S.MainSidebar>
 
     );
 }

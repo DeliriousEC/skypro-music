@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { GlobalStyle } from './App.Styles';
-import * as S from "./App.Styles.js"
+import { GlobalStyle } from "./app-styles.js"
+import * as S from "./app-styles.js"
 import { AppRoutes } from './routes.jsx';
 
 function App() {

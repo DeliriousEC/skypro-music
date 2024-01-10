@@ -1,5 +1,5 @@
-import * as S from "../../App.Styles.js";
-import { GlobalStyle } from "../../App.Styles.js";
+import * as S from "../../app-styles.js";
+import { GlobalStyle } from "../../app-styles.js";
 import AudioPlayer from "../../components/AudioPlayer.jsx";
 import Filters from "../../components/Filters.jsx";
 import NavMenu from "../../components/NavMenu.jsx";

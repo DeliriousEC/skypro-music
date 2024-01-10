@@ -1,6 +1,6 @@
-import { GlobalStyle } from "../../App.Styles";
+import { GlobalStyle } from "../../app-styles";
 import { Categories } from "./Categories";
-import * as S from "../../App.Styles"
+import * as S from "../../app-styles"
 import { useParams } from "react-router-dom";
 
 export const Category = () => {

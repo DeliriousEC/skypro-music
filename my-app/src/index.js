@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import "./index.css"
 import App from './App';
-import { IndexStyles } from './Index.Styles.js';
+import { IndexStyles } from './index-styles.js';
 import {BrowserRouter} from "react-router-dom"
 
 

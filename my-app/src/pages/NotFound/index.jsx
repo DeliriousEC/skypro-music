@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { GlobalStyle } from "../../App.Styles";
-import * as S from "../../App.Styles"
+import { GlobalStyle } from "../../app-styles";
+import * as S from "../../app-styles"
 
 export const NotFound = () => {
 

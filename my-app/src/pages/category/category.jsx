@@ -1,5 +1,5 @@
 import { GlobalStyle } from "../../app-styles.js";
-import { Categories } from "./categories.js";
+import { Categories } from "../category/categories.js";
 import * as S from "../../app-styles.js"
 import { useParams } from "react-router-dom";
 

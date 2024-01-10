@@ -19,3 +19,5 @@ export const Categories = [
         alt: "Indie power",
       },
     ];
+
+    

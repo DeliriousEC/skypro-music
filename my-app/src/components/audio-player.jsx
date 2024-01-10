@@ -1,5 +1,5 @@
 
-import * as S from "./AudioPlayer.Styles"
+import * as S from "./audio-player-styles"
 
 
 export function AudioPlayer({ isLoading }) {

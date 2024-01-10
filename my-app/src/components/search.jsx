@@ -1,4 +1,4 @@
-import * as S from "../components/SearchStyles"
+import * as S from "../components/search-styles"
 
 function Search() {
   return (

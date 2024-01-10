@@ -1,12 +1,12 @@
 import { useState } from "react";
-import * as S from "../components/Filters.Styles.js"
+import * as S from "../components/filters-styles.js"
 
 // import './Filters.css'
 import {
   OpenFilterSinger,
   OpenFilterYears,
   OpenFilterGenre,
-} from "./ActiveFilters.jsx";
+} from "./active-filters.jsx";
 
 function Filters() {
   const [openFilter, setOpenFilter] = useState(null);

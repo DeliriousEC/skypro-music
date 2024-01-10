@@ -1,5 +1,5 @@
-import * as S from "../components/PlaylistsStyles"
-import { Categories } from "../Pages/Category/Categories"
+import * as S from "../components/playlists-styles"
+import { Categories } from "../Pages/category/categories"
 
 const SidebarItemsList = Categories.map( category => 
 

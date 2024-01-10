@@ -1,5 +1,5 @@
-import * as S from "../components/SidebarStyles.js"
-import Playlists from './Playlists.jsx';
+import * as S from "../components/sidebar-styles.js"
+import Playlists from './playlists.jsx';
 
 function Sidebar({isLoading}) {
     return (

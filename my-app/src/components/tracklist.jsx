@@ -1,4 +1,4 @@
-import * as S from "../components/TracklistStyles"
+import * as S from "../components/tracklist-styles"
 
 
 function Tracklist({ isLoading }) {

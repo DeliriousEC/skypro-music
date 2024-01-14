@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom"
-import { Main } from "../src/Pages/Main/index";
-import { NotFound } from "./Pages/NotFound";
-import { Favorites } from "./Pages/Favorites";
-import { Category } from "./Pages/Category/Category";
-import { Login } from "./Pages/Login";
-import { Registration } from "./Pages/Registration";
-import { ProtectedRoute } from "./Pages/protected-route";
+import { Main } from "../src/pages/main/index";
+import { NotFound } from "./pages/not-found";
+import { Favorites } from "./pages/favorites";
+import { Category } from "./pages/category/category";
+import { Login } from "./pages/login";
+import { Registration } from "./pages/registration";
+import { ProtectedRoute } from "./pages/protected-route";
 
 
 

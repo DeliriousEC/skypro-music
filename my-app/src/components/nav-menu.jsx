@@ -1,7 +1,7 @@
 
 import logo from "../components/logo.png"
 import { useState } from 'react';
-import * as S from "../components/NavMenuStyles"
+import * as S from "../components/nav-menu-styles"
 import { useNavigate } from "react-router-dom";
 
 function NavMenu() {

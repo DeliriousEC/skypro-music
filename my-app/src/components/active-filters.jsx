@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import * as S from "../components/Filters.Styles"
+import * as S from "../components/filters-styles"
 
 const OpenFilter = ({ buttonText, listItems, isOpen, toggleFilter }) => {
   const handleClick = () => {

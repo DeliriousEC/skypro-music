@@ -1,12 +1,12 @@
 import * as S from "../../app-styles.js";
 import { GlobalStyle } from "../../app-styles.js";
-import AudioPlayer from "../../components/AudioPlayer.jsx";
-import Filters from "../../components/Filters.jsx";
-import NavMenu from "../../components/NavMenu.jsx";
-import Search from "../../components/Search.jsx";
-import Playlists from "../../components/Playlists.jsx";
-import Sidebar from "../../components/Sidebar.jsx";
-import Tracklist from "../../components/Tracklist.jsx";
+import AudioPlayer from "../../components/audio-player.jsx";
+import Filters from "../../components/filters.jsx";
+import NavMenu from "../../components/nav-menu.jsx";
+import Search from "../../components/search.jsx";
+import Playlists from "../../components/playlists.jsx";
+import Sidebar from "../../components/sidebar.jsx";
+import Tracklist from "../../components/tracklist.jsx";
 import { useState, useEffect } from 'react';
 
 export const Main = ({ }) => {

@@ -1,10 +1,17 @@
 
 import * as S from "./audio-player-styles"
+import {PropTypes} from "prop-types"
 
 
-export function AudioPlayer({ isLoading }) {
+
+export function AudioPlayer({ track, isLoading}) {
+
+  if (!track) {
+    return <div>Трек не определен</div>;
+  }
+
+
   return (
-
     <S.Bar>
       <S.BarContent>
         <S.BarPlayerProgress></S.BarPlayerProgress>
@@ -73,10 +80,10 @@ export function AudioPlayer({ isLoading }) {
                       </S.TrackPlayImage>
                       <S.TrackPlayAuthor>
                         <S.TrackPlayAuthorLink href="http://"
-                        >Ты та...</S.TrackPlayAuthorLink>
+                        >{track.name}</S.TrackPlayAuthorLink>
                       </S.TrackPlayAuthor>
                       <S.TrackPlayAlbum>
-                        <S.TrackPlayAlbumLink href="http://">Баста</S.TrackPlayAlbumLink>
+                        <S.TrackPlayAlbumLink href="http://">{track.author}</S.TrackPlayAlbumLink>
                       </S.TrackPlayAlbum>
                     </S.TrackPlayContain>
 

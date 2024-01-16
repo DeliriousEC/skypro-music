@@ -6,11 +6,6 @@ import {PropTypes} from "prop-types"
 
 export function AudioPlayer({ track, isLoading}) {
 
-  if (!track) {
-    return <div>Трек не определен</div>;
-  }
-
-
   return (
     <S.Bar>
       <S.BarContent>

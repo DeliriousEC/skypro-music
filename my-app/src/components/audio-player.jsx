@@ -1,10 +1,12 @@
 
 import * as S from "./audio-player-styles"
-import {PropTypes} from "prop-types"
-
 
 
 export function AudioPlayer({ track, isLoading}) {
+
+  if (!track) {
+    return <div></div>;
+  }
 
   return (
     <S.Bar>

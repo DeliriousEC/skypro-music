@@ -58,7 +58,8 @@ function Tracklist({ handleTrackPlay, isLoading, tracks, getTracksError }) {
                     </S.TrackTitleSvg>
                   </S.TrackTitleImage>
                   <div>
-                    <S.TrackTitleLink onClick={() => handleTrackPlay(track)}>
+                    <S.TrackTitleLink  href={track.track_file} 
+                    onClick={() => handleTrackPlay(track)}>
                       {track.name} <S.TrackTitleSpan></S.TrackTitleSpan>
                     </S.TrackTitleLink>
                   </div>

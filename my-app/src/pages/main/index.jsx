@@ -18,17 +18,15 @@ export const Main = () => {
   const handleTrackPlay = (track) => {
     setShowBar(track);
   };
+  
   useEffect(() => {
     getTracks()
       .then((tracks) => {
         setTracks(tracks);
-        // console.log(tracks);
         isLoading(false);
       })
       .catch((error) => {
-        setTracksError(
-          `Не удалось загрузить плейлист, попробуйте позже: ${error.message}`
-        );
+        setTracksError(error.message);
       });
   }, []);
 

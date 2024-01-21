@@ -16,27 +16,23 @@ export const Main = () => {
   const [tracksError, setTracksError] = useState(true);
 
   const handleTrackPlay = (track) => {
-    setShowBar(track);
+    setShowBar(track)
   };
-  
+  const [isLoading, setIsLoading] = useState(false); 
+
   useEffect(() => {
+    setIsLoading(true)
     getTracks()
       .then((tracks) => {
         setTracks(tracks);
-        isLoading(false);
-      })
+        setIsLoading(false)
+      }, 2000)
       .catch((error) => {
         setTracksError(error.message);
       });
   }, []);
 
-  const [isLoading, setIsLoading] = useState(false);
-  useEffect(() => {
-    setIsLoading(true)
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 2000);
-  }, [])
+ 
 
   return (
     <>

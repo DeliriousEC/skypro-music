@@ -1,7 +1,7 @@
 import * as S from "../components/tracklist-styles"
 import PropTypes from "prop-types";
 
-function Tracklist({ handleTrackPlay, isLoading, tracks, getTracksError }) {
+function Tracklist({ handleTrackPlay, isLoading, tracks, tracksError }) {
 
   return (
     <S.CenterblockContent>
@@ -15,7 +15,7 @@ function Tracklist({ handleTrackPlay, isLoading, tracks, getTracksError }) {
           </S.PlaylistTitleSvg>
         </S.PlaylistTitleColCol04>
       </S.ContentTitle>
-      <p>{getTracksError}</p>
+      <p>{tracksError}</p>
       <S.ContentPlaylist>
         {
           isLoading ? ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((item) => (
@@ -53,13 +53,16 @@ function Tracklist({ handleTrackPlay, isLoading, tracks, getTracksError }) {
                 <S.TrackTitle>
                   <S.TrackTitleImage>
                     <S.TrackTitleSvg alt="music">
-                      <use xlinkHref="/icon/sprite.svg#icon-note"></use>
+                      <use xlinkHref="./img/icon/sprite.svg#icon-note"></use>
                       {track.logo}
                     </S.TrackTitleSvg>
                   </S.TrackTitleImage>
                   <div>
-                    <S.TrackTitleLink  href={track.track_file} 
-                    onClick={() => handleTrackPlay(track)}>
+                    <S.TrackTitleLink 
+                    // href={track.track_file} 
+                    href="#"
+                     onClick={() => handleTrackPlay(track)} 
+                     >
                       {track.name} <S.TrackTitleSpan></S.TrackTitleSpan>
                     </S.TrackTitleLink>
                   </div>
@@ -76,7 +79,7 @@ function Tracklist({ handleTrackPlay, isLoading, tracks, getTracksError }) {
                 </S.TrackAlbum>
                 <div>
                   <S.TrackTimeSvg alt="time">
-                    <use xlinkHref="/icon/sprite.svg#icon-like"></use>
+                    <use xlinkHref="././img/icon/sprite.svg#icon-like"></use>
                   </S.TrackTimeSvg>
                   <S.TrackTimeText>
                     4:44

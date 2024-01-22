@@ -1,5 +1,5 @@
 import * as S from "../components/tracklist-styles"
-import PropTypes from "prop-types";
+
 
 function Tracklist({ handleTrackPlay, isLoading, tracks, tracksError }) {
 
@@ -19,7 +19,7 @@ function Tracklist({ handleTrackPlay, isLoading, tracks, tracksError }) {
       <S.ContentPlaylist>
         {
           isLoading ? ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((item) => (
-            <S.PlaylistItem key={item}>
+            <S.PlaylistItem key={"skeleton-" + item}>
               <S.PlaylistTrack>
                 <S.TrackTitle>
                   <S.TrackTitleImage>
@@ -47,7 +47,6 @@ function Tracklist({ handleTrackPlay, isLoading, tracks, tracksError }) {
             </S.PlaylistItem>
           ))
           ) : tracks.length > 0 && tracks.map((track) =>  (
-            <>
               <S.PlaylistItem key={track.id}>
               <S.PlaylistTrack>
                 <S.TrackTitle>
@@ -87,7 +86,6 @@ function Tracklist({ handleTrackPlay, isLoading, tracks, tracksError }) {
                 </div>
               </S.PlaylistTrack>
             </S.PlaylistItem>
-            </>
           ))}
 
       </S.ContentPlaylist>

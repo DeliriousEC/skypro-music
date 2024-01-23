@@ -29,6 +29,7 @@ export const Main = () => {
       }, 2000)
       .catch((error) => {
         setTracksError(error.message);
+        setIsLoading(false)
       });
   }, []);
 

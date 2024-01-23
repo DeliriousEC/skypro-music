@@ -7,18 +7,18 @@ import Search from "../../components/search.jsx";
 import Playlists from "../../components/playlists.jsx";
 import Sidebar from "../../components/sidebar.jsx";
 import Tracklist from "../../components/tracklist.jsx";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { getTracks } from "../../api.js";
 
 export const Main = () => {
   const [showBar, setShowBar] = useState(null);
   const [tracks, setTracks] = useState(true);
   const [tracksError, setTracksError] = useState(true);
+  const [isLoading, setIsLoading] = useState(false); 
 
   const handleTrackPlay = (track) => {
     setShowBar(track)
   };
-  const [isLoading, setIsLoading] = useState(false); 
 
   useEffect(() => {
     setIsLoading(true)
@@ -28,7 +28,7 @@ export const Main = () => {
         setIsLoading(false)
       }, 2000)
       .catch((error) => {
-        setTracksError("Не удалось загрузить плейлист, попробуйте позже");
+        setTracksError(`Не удалось загрузить плейлист, попробуйте позже (${error.message})`);
         setIsLoading(false)
       });
   }, []);

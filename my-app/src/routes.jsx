@@ -6,7 +6,7 @@ import { Category } from "./pages/category/category";
 import { Login } from "./pages/login";
 import { Registration } from "./pages/registration";
 import { ProtectedRoute } from "./pages/protected-route";
-
+import {PropTypes} from "prop-types"
 
 
 
@@ -30,3 +30,5 @@ export const AppRoutes = ({ user, setUser }) => {
         </Routes>
     );
 };
+
+  export default AppRoutes;

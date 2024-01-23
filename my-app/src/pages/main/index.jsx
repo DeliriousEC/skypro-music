@@ -28,7 +28,7 @@ export const Main = () => {
         setIsLoading(false)
       }, 2000)
       .catch((error) => {
-        setTracksError(error.message);
+        setTracksError("Не удалось загрузить плейлист, попробуйте позже");
         setIsLoading(false)
       });
   }, []);

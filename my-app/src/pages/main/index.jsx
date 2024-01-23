@@ -9,16 +9,31 @@ import Sidebar from "../../components/sidebar.jsx";
 import Tracklist from "../../components/tracklist.jsx";
 import { useState, useEffect, useRef } from 'react';
 import { getTracks } from "../../api.js";
+import {handleStart, handleStop, } from "../../components/audio-player.jsx"
 
 export const Main = () => {
   const [showBar, setShowBar] = useState(null);
   const [tracks, setTracks] = useState(true);
   const [tracksError, setTracksError] = useState(true);
   const [isLoading, setIsLoading] = useState(false); 
+  const [isPlaying, setIsPlaying] = useState(false); 
+  const audioRef = useRef(null);
 
   const handleTrackPlay = (track) => {
     setShowBar(track)
   };
+
+  const handleStart = () => {
+    console.log("handleStart");
+    audioRef.current.play();
+    setIsPlaying(true);
+  };
+  
+  const handleStop = () => {
+    audioRef.current.pause();
+    setIsPlaying(false);
+  };
+  
 
   useEffect(() => {
     setIsLoading(true)
@@ -55,7 +70,15 @@ export const Main = () => {
       
       isLoading={isLoading} />
       {showBar ? (
-          <AudioPlayer track={showBar} setShowBar={setShowBar} />
+          <AudioPlayer
+          track={showBar}
+          handleTrackPlay={handleTrackPlay}
+          setShowBar={setShowBar}
+          setIsPlaying={setIsPlaying}
+          handleStart={handleStart}
+          handleStop={handleStop}
+          isPlaying={isPlaying}
+          audioRef={audioRef} />
         ) : null}
       <footer className="footer"></footer>
     </>

@@ -205,6 +205,14 @@ grid-template-areas: "image author" "image album";
 align-items: center;
 `;
 
+export const TrackTime = styled.div`
+  color: #696969;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  `;
+
 export const TrackPlayImage = styled.div`
 width: 51px;
 height: 51px;
@@ -354,4 +362,8 @@ animation: changeBackgroundColor 2s infinite;
 100% {
   background-color: #313131;
 }
+`;
+
+export const StandartAudioPlayer = styled.audio`
+display: none;
 `;

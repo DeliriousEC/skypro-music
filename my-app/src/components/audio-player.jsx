@@ -16,16 +16,14 @@ export const convertSecToMinAndSec = (time) => {
 
 
 export function AudioPlayer({ track, isLoading, handleStop, handleStart, isPlaying, setIsPlaying, audioRef}) {
+
 const navigateTrack = () => {
   alert("Эта функция будет доступна в будущем");
-};
-  if (!track) {
-    return <div></div>;
-  }
+    };
 
   const [currentTime, setCurrentTime] = useState(0); 
 
-  const duration = audioRef.current?.duration || 0; 
+  const duration = audioRef?.current?.duration || 0; 
   const progressPercent = (currentTime / duration) * 100 || 0;
 
   const handleVolumeChange = (e) => {
@@ -40,40 +38,49 @@ const navigateTrack = () => {
 
   const togglePlay = isPlaying ? handleStop : handleStart;
 
-  useEffect(() => {
-    audioRef.current.load();
-  }, [track]);
+  // useEffect(() => {
+  //   audioRef.current.load();
+  // }, [track]);
 
+  useEffect(() => { if (audioRef?.current) { audioRef.current.load(); } }, [track]);
 
   useEffect(() => {
     const updateCurrentTime = () => {
-      if (audioRef.current) {
+      if (audioRef?.current) {
         setCurrentTime(audioRef.current.currentTime);
       }
     };
 
-    if (audioRef.current) {
+    if (audioRef?.current) {
       audioRef.current.addEventListener("timeupdate", updateCurrentTime);
     }
 
     return () => {
 
-      if (audioRef.current) {
+      if (audioRef?.current) {
         audioRef.current.removeEventListener("timeupdate", updateCurrentTime);
       }
     };
-  }, [audioRef]);
+  }, 
+    [audioRef]);
 
-  useEffect(() => {
-    if (audioRef.current) {
-      setCurrentTime(audioRef.current.currentTime);
+  // useEffect(() => {
+  //   if (audioRef?.current) {
+  //     setCurrentTime(audioRef?.current.currentTime);
 
-      if (audioRef.current.currentTime === audioRef.current.duration) {
-        setCurrentTime(0);
-        setIsPlaying(false);
-      }
-    }
-  }, [audioRef.current, audioRef.current?.currentTime]);
+  //     if (audioRef?.current.currentTime === audioRef?.current.duration) {
+  //       setCurrentTime(0);
+  //       setIsPlaying(false);
+  //     }
+  //   }
+  // }, [audioRef?.current, audioRef?.current.currentTime]);
+
+  useEffect(() => { if (audioRef?.current) { setCurrentTime(audioRef?.current?.currentTime);
+     if (audioRef?.current.currentTime === audioRef.current?.duration) { setCurrentTime(0);
+      setIsPlaying(false);
+    }}},
+      
+[audioRef?.current, audioRef?.current?.currentTime]);
 
   const handleProgressBarClick = (e) => {
     const progressBar = e.currentTarget;
@@ -97,6 +104,10 @@ const navigateTrack = () => {
     setIsLooped(false);
   };
   const toggleLoop = isLooped ? handleUnloop : handleLoop;
+
+  if (!track) {
+    return <div></div>;
+  }
 
   return (
     <>
@@ -125,9 +136,12 @@ const navigateTrack = () => {
                 </S.PlayerBtnPrevSvg>
               </S.PlayerBtnPrev>
               <S.PlayerBtnPlay>
-                <S.PlayerBtnPlaySvg  alt="play" 
-                onClick={togglePlay}>
-                  <use xlinkHref="./img/icon/sprite.svg#icon-play"></use>
+                <S.PlayerBtnPlaySvg  alt="play" onClick={togglePlay}>
+                    {isPlaying ? (
+                      <use xlinkHref="./icon/sprite-2.svg#icon-pause"></use>
+                    ) : (
+                      <use xlinkHref="./icon/sprite.svg#icon-play"></use>
+                    )}
                 </S.PlayerBtnPlaySvg>
               </S.PlayerBtnPlay>
               <S.PlayerBtnNext>

@@ -13,7 +13,7 @@ left: 50%;
 right: 50%;
 width: 100%;
 transform: translate(-50%, 0%);
-background: rgba(28, 28, 28, 0.5);
+
 `;
 
 export const BarContent = styled.div `
@@ -29,9 +29,18 @@ max-width: 100%;
 `;
 
 export const BarPlayerProgress = styled.div `
+position: relative;
 width: 100%;
-height: 5px;
+height: 8px;
 background: #2e2e2e;
+cursor: pointer;
+`;
+export const BarPlayerProgressLoad = styled.div`
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 8px;
+  background: #b672ff;
 `;
 
 export const BarPlayerBlock = styled.div `
@@ -113,6 +122,7 @@ display: flex;
 align-items: center;
 cursor: pointer;
 margin-right: 23px;
+cursor: pointer;
 `;
 
 export const PlayerBtnPlaySvg = styled.svg `
@@ -156,7 +166,13 @@ export const PlayerBtnRepeatSvg = styled.svg`
 width: 18px;
 height: 12px;
 fill: transparent;
-stroke: #696969;
+stroke: ${(props) => (props.$isLooped ? "#fff" : "#696969")};
+  &:hover {
+    stroke: ${(props) => (props.$isLooped ? "#fff" : "#acacac")};
+  }
+  &:active {
+    stroke: #fff;
+  }
 `;
 
 export const PlayerBtnShuffle = styled.div`
@@ -181,6 +197,9 @@ width: 19px;
 height: 12px;
 fill: transparent;
 stroke: #696969;
+&:hover {
+  stroke: #acacac;
+}
 `;
 
 export const PlayerTrackPlay = styled.div`
@@ -323,6 +342,7 @@ display: -webkit-box;
   -webkit-box-pack: flex-end;
   -ms-flex-pack: flex-end;
   justify-content: flex-end;
+  cursor: pointer;
 `;
 
 export const VolumeImage = styled.div`
@@ -339,10 +359,12 @@ fill: transparent;?
 
 export const VolumeProgress = styled.div`
 width: 109px;
+  cursor: pointer;
 `;
 
 export const VolumeProgressLine = styled.div`
 width: 109px;
+cursor: pointer;
 `;
 
 export const SkeletonAudioPlayer = styled.div`

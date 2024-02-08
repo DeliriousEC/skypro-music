@@ -124,7 +124,9 @@ const navigateTrack = () => {
               convertSecToMinAndSec(duration)}
           </S.TrackTime>
         <S.BarPlayerProgress  onClick={handleProgressBarClick}>
-
+        <S.BarPlayerProgressLoad
+              style={{ width: `${progressPercent}%` }}
+            ></S.BarPlayerProgressLoad>
         </S.BarPlayerProgress>
         <S.BarPlayerBlock>
           <S.BarPlayer>
@@ -138,9 +140,9 @@ const navigateTrack = () => {
               <S.PlayerBtnPlay>
                 <S.PlayerBtnPlaySvg  alt="play" onClick={togglePlay}>
                     {isPlaying ? (
-                      <use xlinkHref="./icon/sprite-2.svg#icon-pause"></use>
+                      <use xlinkHref="./img/icon/sprite-2.svg#icon-pause"></use>
                     ) : (
-                      <use xlinkHref="./icon/sprite.svg#icon-play"></use>
+                      <use xlinkHref="./img/icon/sprite.svg#icon-play"></use>
                     )}
                 </S.PlayerBtnPlaySvg>
               </S.PlayerBtnPlay>

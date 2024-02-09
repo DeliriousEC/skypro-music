@@ -24,7 +24,7 @@ export const Main = () => {
   };
 
   const handleStart = () => {
-    console.log("handleStart");
+    // console.log("handleStart");
     audioRef.current.play();
     setIsPlaying(true);
   };

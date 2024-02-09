@@ -362,7 +362,7 @@ width: 109px;
   cursor: pointer;
 `;
 
-export const VolumeProgressLine = styled.div`
+export const VolumeProgressLine = styled.input`
 width: 109px;
 cursor: pointer;
 `;

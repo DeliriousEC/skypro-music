@@ -4,7 +4,8 @@ import { NotFound } from "./pages/not-found";
 import { Favorites } from "./pages/favorites";
 import { Category } from "./pages/category/category";
 import { ProtectedRoute } from "./pages/protected-route";
-import AuthPage from "./pages/register/register.jsx";
+import Register from "./pages/register/register.jsx";
+import Login from "./pages/login/index.jsx";
 
 
 export const AppRoutes = ({ user, handleLogout}) => {
@@ -20,14 +21,8 @@ export const AppRoutes = ({ user, handleLogout}) => {
                 <Route path="/Main" element={<Main />} />
             </Route>
 
-            <Route
-        path="/login"
-        element={<AuthPage isLoginMode={true}></AuthPage>}
-      ></Route>
-      <Route
-        path="/register"
-        element={<AuthPage isLoginMode={false}></AuthPage>}
-      ></Route>
+            <Route path="/login" element={<Login user={user} />} />
+         <Route path="/register" element={<Register user={user} />} />
 
         </Routes>
     );

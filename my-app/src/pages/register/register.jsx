@@ -4,7 +4,7 @@ import {useContext, useEffect, useState, useRef } from "react";
 import { registerUser} from "../../api";
 import { UserContext } from "../../authorization";
 
-export default function AuthPage({ isLoginMode = false }) {
+export default function Register() {
   const navigate = useNavigate();
   const { changingUserData } = useContext(UserContext);
   const authBtnRef = useRef(null);
@@ -73,81 +73,42 @@ export default function AuthPage({ isLoginMode = false }) {
   // Сбрасываем ошибку если пользователь меняет данные на форме или меняется режим формы
   useEffect(() => {
     setError(null);
-  }, [isLoginMode, email, password, repeatPassword]);
+  }, [ email, password, repeatPassword]);
 
   return (
     <S.PageContainer>
       <S.ModalForm>
-        <Link to="/login">
+        <Link to="/">
           <S.ModalLogo>
             <S.ModalLogoImage src="./img/logo_modal.png" alt="logo" />
           </S.ModalLogo>
         </Link>
-        {isLoginMode ? (
-          <>
-            <S.Inputs>
-              <S.ModalInput
-                type="text"
-                name="login"
-                placeholder="Почта"
-                value={email}
-                onChange={(event) => {
-                  setEmail(event.target.value);
-                }}
-              />
-              <S.ModalInput
-                type="password"
-                name="password"
-                placeholder="Пароль"
-                value={password}
-                onChange={(event) => {
-                  setPassword(event.target.value);
-                }}
-              />
-            </S.Inputs>
-            {error && <S.Error>{error}</S.Error>}
-            <S.Buttons>
-              <S.PrimaryButton onClick={() => handleLogin({ email, password })}>
-                Войти
-              </S.PrimaryButton>
-              <Link to="/register">
-                <S.SecondaryButton>Зарегистрироваться</S.SecondaryButton>
-              </Link>
-            </S.Buttons>
-          </>
-        ) : (
-          <>
-            <S.Inputs>
-              <S.ModalInput
-                type="text"
-                name="login"
-                placeholder="Почта"
-                value={email}
-                onChange={(event) => {
-                  setEmail(event.target.value);
-                }}
-              />
-              <S.ModalInput
-                type="password"
-                name="password"
-                placeholder="Пароль"
-                value={password}
-                onChange={(event) => {
-                  setPassword(event.target.value);
-                }}
-              />
-              <S.ModalInput
-                type="password"
-                name="repeat-password"
-                placeholder="Повторите пароль"
-                value={repeatPassword}
-                onChange={(event) => {
-                  setRepeatPassword(event.target.value);
-                }}
-              />
-            </S.Inputs>
-            {error && <S.Error>{error}</S.Error>}
-            <S.Buttons>
+        <>
+          <S.Inputs>
+            <S.ModalInput
+              type="text"
+              name="login"
+              placeholder="Почта"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+            />
+            <S.ModalInput
+              type="password"
+              name="password"
+              placeholder="Пароль"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+            />
+            <S.ModalInput
+              type="password"
+              name="repeat-password"
+              placeholder="Повторите пароль"
+              value={repeatPassword}
+              onChange={(event) => setRepeatPassword(event.target.value)}
+            />
+          </S.Inputs>
+          {error && <S.Error>{error}</S.Error>}
+          <S.Buttons>
             <S.PrimaryButton
               onClick={handleRegister}
               ref={authBtnRef}
@@ -155,9 +116,8 @@ export default function AuthPage({ isLoginMode = false }) {
             >
               {isRegistering ? "Регистрация..." : "Зарегистрироваться"}
             </S.PrimaryButton>
-            </S.Buttons>
-          </>
-        )}
+          </S.Buttons>
+        </>
       </S.ModalForm>
     </S.PageContainer>
   );

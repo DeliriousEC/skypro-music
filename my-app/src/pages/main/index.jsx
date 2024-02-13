@@ -11,7 +11,8 @@ import { useState, useEffect, useRef } from 'react';
 import { getTracks } from "../../api.js";
 import {handleStart, handleStop, } from "../../components/audio-player.jsx"
 
-export const Main = () => {
+
+export const Main = ({handleLogout}) => {
   const [showBar, setShowBar] = useState(null);
   const [tracks, setTracks] = useState(true);
   const [tracksError, setTracksError] = useState(true);
@@ -68,7 +69,7 @@ export const Main = () => {
       </S.Main>
       <AudioPlayer 
       
-      isLoading={isLoading} />
+      isLoading={isLoading} handleLogout={handleLogout} />
       {showBar ? (
           <AudioPlayer
           track={showBar}

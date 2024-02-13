@@ -15,7 +15,7 @@ function App() {
     navigate("/login");
     setUser(null)
   };
-  
+
   return (
     <>
     <UserContext.Provider
@@ -32,8 +32,7 @@ function App() {
             />
           </S.Container>
     </S.Wrapper>
-            
-    </UserContext.Provider>
+   </UserContext.Provider>
     </>
 
   );

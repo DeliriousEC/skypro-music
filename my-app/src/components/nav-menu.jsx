@@ -15,7 +15,8 @@ function NavMenu() {
   };
 
 
-  return (<S.MainNav>
+  return (
+  <S.MainNav>
     <S.NavLogo>
       
     <S.LogoImage src={logo} alt="logo" />

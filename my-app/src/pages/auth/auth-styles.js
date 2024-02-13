@@ -20,6 +20,7 @@ export const ModalForm = styled.div`
   border-radius: 12px;
   padding: 43px 47px 47px 40px;
 `;
+
 export const ModalLogo = styled.div`
   display: flex;
   justify-content: center;

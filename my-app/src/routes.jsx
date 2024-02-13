@@ -7,7 +7,7 @@ import { Login } from "./pages/login";
 import { Registration } from "./pages/registration";
 import { ProtectedRoute } from "./pages/protected-route";
 import {PropTypes} from "prop-types"
-
+import AuthPage from "../src/pages/auth/auth-page"
 
 
 export const AppRoutes = ({ user, setUser }) => {
@@ -23,9 +23,16 @@ export const AppRoutes = ({ user, setUser }) => {
                 <Route path="/Main" element={<Main />} />
             </Route>
 
-            <Route path="/Login" element={<Login setUser={setUser} />} />
-            <Route path="/Registration" element={<Registration />} />
+            <Route
+        path="/login"
+        element={<AuthPage isLoginMode={true}></AuthPage>}
+      ></Route>
+      <Route
+        path="/register"
+        element={<AuthPage isLoginMode={false}></AuthPage>}
+      ></Route>
 
+      <Route path="*" element={<h2>404</h2>}></Route>
             <Route />
         </Routes>
     );

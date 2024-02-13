@@ -11,9 +11,9 @@ function Sidebar({handleLogout}) {
 <S.MainSidebar>
             <S.SidebarPersonal>
               <S.SidebarPersonalName>{userData.username}</S.SidebarPersonalName>
-              <S.SidebarIcon onClick={handleLogout}>
+              <S.SidebarIcon>
                 <S.LogoutSvg>
-                <use xlinkHref="./img/icon/sprite.svg#logout"></use>
+                <use xlinkHref="./img/icon/sprite.svg#logout" onClick={handleLogout}></use>
                 </S.LogoutSvg>
               </S.SidebarIcon>
             </S.SidebarPersonal>

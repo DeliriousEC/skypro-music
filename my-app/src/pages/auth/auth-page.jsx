@@ -1,13 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
 import * as S from "./auth-styles";
-import {useContext, useEffect, useState } from "react";
+import {useContext, useEffect, useState, useRef } from "react";
 import { registerUser} from "../../api";
 import { UserContext } from "../../authorization";
 
 export default function AuthPage({ isLoginMode = false }) {
   const navigate = useNavigate();
   const { changingUserData } = useContext(UserContext);
-
+  const authBtnRef = useRef(null);
   const [error, setError] = useState(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -45,7 +45,6 @@ export default function AuthPage({ isLoginMode = false }) {
       const response = await registerUser({ email, password });
       if (response.ok) {
         const user = await response.json();
-       // localStorage.setItem("user", JSON.stringify(user));
         changingUserData(user);
         navigate("/login");
       } else {
@@ -149,9 +148,13 @@ export default function AuthPage({ isLoginMode = false }) {
             </S.Inputs>
             {error && <S.Error>{error}</S.Error>}
             <S.Buttons>
-              <S.PrimaryButton onClick={handleRegister}>
-                Зарегистрироваться
-              </S.PrimaryButton>
+            <S.PrimaryButton
+              onClick={handleRegister}
+              ref={authBtnRef}
+              disabled={isRegistering}
+            >
+              {isRegistering ? "Регистрация..." : "Зарегистрироваться"}
+            </S.PrimaryButton>
             </S.Buttons>
           </>
         )}

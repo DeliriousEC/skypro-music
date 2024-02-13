@@ -7,7 +7,7 @@ import { ProtectedRoute } from "./pages/protected-route";
 import AuthPage from "./pages/register/register.jsx";
 
 
-export const AppRoutes = ({ user, setUser }) => {
+export const AppRoutes = ({ user, handleLogout}) => {
     return (
         <Routes>
             <Route path="*" element={<NotFound />} />
@@ -15,7 +15,8 @@ export const AppRoutes = ({ user, setUser }) => {
             <Route element={<ProtectedRoute isAllowed={Boolean(user)} />}>
                 <Route path="/Favorites" element={<Favorites />} />
                 <Route path="/Category/:id" element={<Category />} />
-                <Route path="/" element={<Main />} />
+                <Route path="/"
+          element={<Main user={user} handleLogout={handleLogout} />} />
                 <Route path="/Main" element={<Main />} />
             </Route>
 
@@ -28,8 +29,6 @@ export const AppRoutes = ({ user, setUser }) => {
         element={<AuthPage isLoginMode={false}></AuthPage>}
       ></Route>
 
-      <Route path="*" element={<h2>404</h2>}></Route>
-            <Route />
         </Routes>
     );
 };

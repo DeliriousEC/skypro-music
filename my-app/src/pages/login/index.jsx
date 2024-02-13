@@ -1,8 +1,9 @@
-import * as S from "../../app-styles.js"
+import * as S from "../register/register.js"
 import {Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../authorization.js";
 import {loginUser} from "../../api.js"
 import { useContext, useEffect, useRef, useState } from "react";
+import logo from "../../components/img/logo_modal.png"
 
 export default function Login() {
   const navigate = useNavigate();
@@ -64,9 +65,9 @@ export default function Login() {
   return (
     <S.PageContainer>
     <S.ModalForm>
-      <Link to="/">
+      <Link to="/login">
         <S.ModalLogo>
-          <S.ModalLogoImage src="./img/logo_modal.png" alt="logo" />
+          <S.ModalLogoImage src={logo} alt="logo" />
         </S.ModalLogo>
       </Link>
       <>

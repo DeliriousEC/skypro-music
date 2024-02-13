@@ -27,6 +27,7 @@ height: 43px;
 padding: 13px 0 13px 0;
 background-color: transparent;
 margin-bottom: 20px;
+cursor: pointer;
 `;
 
 export const NavBurger = styled.div`
@@ -43,6 +44,7 @@ flex-direction: column;
 -webkit-box-pack: justify;
 -ms-flex-pack: justify;
 justify-content: space-between;
+cursor: pointer;
 `;
 
 export const NavMenu = styled.div`

@@ -19,7 +19,7 @@ function NavMenu() {
   <S.MainNav>
     <S.NavLogo>
       
-    <S.LogoImage src={logo} alt="logo" />
+    <S.LogoImage to="/main" src={logo} alt="logo" />
     </S.NavLogo>
     <S.NavBurger onClick={burgerClick}>
       <S.BurgerLine ></S.BurgerLine>

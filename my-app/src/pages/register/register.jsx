@@ -3,6 +3,7 @@ import * as S from "./register";
 import {useContext, useEffect, useState, useRef } from "react";
 import { registerUser} from "../../api";
 import { UserContext } from "../../authorization";
+import logo from "../../components/img/logo_modal.png";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -78,9 +79,9 @@ export default function Register() {
   return (
     <S.PageContainer>
       <S.ModalForm>
-        <Link to="/">
+        <Link to="/login">
           <S.ModalLogo>
-            <S.ModalLogoImage src="./img/logo_modal.png" alt="logo" />
+            <S.ModalLogoImage src={logo} alt="logo" />
           </S.ModalLogo>
         </Link>
         <>

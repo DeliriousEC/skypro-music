@@ -4,7 +4,7 @@ import { NotFound } from "./pages/not-found";
 import { Favorites } from "./pages/favorites";
 import { Category } from "./pages/category/category";
 import { ProtectedRoute } from "./pages/protected-route";
-import AuthPage from "../src/pages/auth/auth-page";
+import AuthPage from "./pages/register/register.jsx";
 
 
 export const AppRoutes = ({ user, setUser }) => {

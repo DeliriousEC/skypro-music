@@ -32,8 +32,7 @@ cursor: pointer;
 
 export const NavBurger = styled.div`
 width: 20px;
-height: 36px;
-padding: 13px 0;
+height: 13px;
 display: -webkit-box;
 display: -ms-flexbox;
 display: flex;
@@ -77,7 +76,7 @@ color: #181818;
 
 export const BurgerLine = styled.span`
 display: inline-block;
-width: 100%;
+width: 20px;
 height: 1px;
 background-color: #d3d3d3;
 `;

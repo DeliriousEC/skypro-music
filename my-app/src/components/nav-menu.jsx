@@ -24,6 +24,7 @@ function NavMenu() {
     <S.NavBurger onClick={burgerClick}>
       <S.BurgerLine ></S.BurgerLine>
       <S.BurgerLine ></S.BurgerLine>
+      <S.BurgerLine ></S.BurgerLine>
       <span></span>
     </S.NavBurger>
     {visible && (<S.NavMenu>

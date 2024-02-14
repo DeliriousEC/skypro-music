@@ -7,17 +7,49 @@ import Search from "../../components/search.jsx";
 import Playlists from "../../components/playlists.jsx";
 import Sidebar from "../../components/sidebar.jsx";
 import Tracklist from "../../components/tracklist.jsx";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { getTracks } from "../../api.js";
+import {handleStart, handleStop, } from "../../components/audio-player.jsx"
 
-export const Main = ({ }) => {
 
-  const [isLoading, setIsLoading] = useState(false);
+export const Main = ({handleLogout}) => {
+  const [showBar, setShowBar] = useState(null);
+  const [tracks, setTracks] = useState(true);
+  const [tracksError, setTracksError] = useState(true);
+  const [isLoading, setIsLoading] = useState(false); 
+  const [isPlaying, setIsPlaying] = useState(false); 
+  const audioRef = useRef(null);
+
+  const handleTrackPlay = (track) => {
+    setShowBar(track)
+  };
+
+  const handleStart = () => {
+    // console.log("handleStart");
+    audioRef.current.play();
+    setIsPlaying(true);
+  };
+  
+  const handleStop = () => {
+    audioRef.current.pause();
+    setIsPlaying(false);
+  };
+  
+
   useEffect(() => {
     setIsLoading(true)
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 2000);
-  }, [])
+    getTracks()
+      .then((tracks) => {
+        setTracks(tracks);
+        setIsLoading(false)
+      }, 2000)
+      .catch((error) => {
+        setTracksError(`Не удалось загрузить плейлист, попробуйте позже (${error.message})`);
+        setIsLoading(false)
+      });
+  }, []);
+
+ 
 
   return (
     <>
@@ -27,11 +59,28 @@ export const Main = ({ }) => {
           <Search />
           <S.CenterblockH2>Треки</S.CenterblockH2>
           <Filters />
-          <Tracklist isLoading={isLoading} />
+          <Tracklist
+           handleTrackPlay={handleTrackPlay}
+           tracks={tracks}
+              tracksError={tracksError}
+           isLoading={isLoading} />
         </div>
         <Sidebar isLoading={isLoading} />
       </S.Main>
-      <AudioPlayer isLoading={isLoading} />
+      <AudioPlayer 
+      
+      isLoading={isLoading} handleLogout={handleLogout} />
+      {showBar ? (
+          <AudioPlayer
+          track={showBar}
+          handleTrackPlay={handleTrackPlay}
+          setShowBar={setShowBar}
+          setIsPlaying={setIsPlaying}
+          handleStart={handleStart}
+          handleStop={handleStop}
+          isPlaying={isPlaying}
+          audioRef={audioRef} />
+        ) : null}
       <footer className="footer"></footer>
     </>
   );

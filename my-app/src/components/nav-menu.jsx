@@ -15,12 +15,14 @@ function NavMenu() {
   };
 
 
-  return (<S.MainNav>
+  return (
+  <S.MainNav>
     <S.NavLogo>
       
-    <S.LogoImage src={logo} alt="logo" />
+    <S.LogoImage to="/main" src={logo} alt="logo" />
     </S.NavLogo>
     <S.NavBurger onClick={burgerClick}>
+      <S.BurgerLine ></S.BurgerLine>
       <S.BurgerLine ></S.BurgerLine>
       <S.BurgerLine ></S.BurgerLine>
       <span></span>

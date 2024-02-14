@@ -2,11 +2,18 @@ import styled from "styled-components";
 
 
 export const Bar = styled.div `
+display: flex; 
+justify-content: center; 
+align-items: center;
+max-width: 1920px;
+box-sizing: border-box;
 position: fixed;
 bottom: 0;
-left: 0;
+left: 50%;
+right: 50%;
 width: 100%;
-background: rgba(28, 28, 28, 0.5);
+transform: translate(-50%, 0%);
+
 `;
 
 export const BarContent = styled.div `
@@ -17,12 +24,23 @@ display: flex;
 -webkit-box-direction: normal;
 -ms-flex-direction: column;
 flex-direction: column;
+max-width: 100%;
+    min-width: 100%;
 `;
 
 export const BarPlayerProgress = styled.div `
+position: relative;
 width: 100%;
-height: 5px;
+height: 8px;
 background: #2e2e2e;
+cursor: pointer;
+`;
+export const BarPlayerProgressLoad = styled.div`
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 8px;
+  background: #b672ff;
 `;
 
 export const BarPlayerBlock = styled.div `
@@ -104,6 +122,7 @@ display: flex;
 align-items: center;
 cursor: pointer;
 margin-right: 23px;
+cursor: pointer;
 `;
 
 export const PlayerBtnPlaySvg = styled.svg `
@@ -147,7 +166,13 @@ export const PlayerBtnRepeatSvg = styled.svg`
 width: 18px;
 height: 12px;
 fill: transparent;
-stroke: #696969;
+stroke: ${(props) => (props.$isLooped ? "#fff" : "#696969")};
+  &:hover {
+    stroke: ${(props) => (props.$isLooped ? "#fff" : "#acacac")};
+  }
+  &:active {
+    stroke: #fff;
+  }
 `;
 
 export const PlayerBtnShuffle = styled.div`
@@ -172,6 +197,9 @@ width: 19px;
 height: 12px;
 fill: transparent;
 stroke: #696969;
+&:hover {
+  stroke: #acacac;
+}
 `;
 
 export const PlayerTrackPlay = styled.div`
@@ -195,6 +223,14 @@ grid-template-areas: "image author" "image album";
 -ms-flex-align: center;
 align-items: center;
 `;
+
+export const TrackTime = styled.div`
+  color: #696969;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  `;
 
 export const TrackPlayImage = styled.div`
 width: 51px;
@@ -306,6 +342,7 @@ display: -webkit-box;
   -webkit-box-pack: flex-end;
   -ms-flex-pack: flex-end;
   justify-content: flex-end;
+  cursor: pointer;
 `;
 
 export const VolumeImage = styled.div`
@@ -322,10 +359,12 @@ fill: transparent;?
 
 export const VolumeProgress = styled.div`
 width: 109px;
+  cursor: pointer;
 `;
 
-export const VolumeProgressLine = styled.div`
+export const VolumeProgressLine = styled.input`
 width: 109px;
+cursor: pointer;
 `;
 
 export const SkeletonAudioPlayer = styled.div`
@@ -345,4 +384,8 @@ animation: changeBackgroundColor 2s infinite;
 100% {
   background-color: #313131;
 }
+`;
+
+export const StandartAudioPlayer = styled.audio`
+display: none;
 `;

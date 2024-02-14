@@ -14,6 +14,7 @@ flex-direction: row;
 -webkit-box-align: center;
 -ms-flex-align: center;
 align-items: center;
+margin-top: 33px;
 `;
 
 export const SearchText = styled.input`

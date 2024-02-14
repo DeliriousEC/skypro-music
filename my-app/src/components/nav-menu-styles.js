@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 export const MainNav = styled.div`
 width: 244px;
 background-color: #181818;
-padding: 20px 0 20px 36px;
+padding: 33px 0 20px 36px;
 `;
 
 export const MainCenterblock = styled.div`
@@ -27,12 +27,12 @@ height: 43px;
 padding: 13px 0 13px 0;
 background-color: transparent;
 margin-bottom: 20px;
+cursor: pointer;
 `;
 
 export const NavBurger = styled.div`
 width: 20px;
-height: 36px;
-padding: 13px 0;
+height: 13px;
 display: -webkit-box;
 display: -ms-flexbox;
 display: flex;
@@ -43,6 +43,7 @@ flex-direction: column;
 -webkit-box-pack: justify;
 -ms-flex-pack: justify;
 justify-content: space-between;
+cursor: pointer;
 `;
 
 export const NavMenu = styled.div`
@@ -75,7 +76,7 @@ color: #181818;
 
 export const BurgerLine = styled.span`
 display: inline-block;
-width: 100%;
+width: 20px;
 height: 1px;
 background-color: #d3d3d3;
 `;

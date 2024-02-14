@@ -10,9 +10,6 @@ return(
     <S.Wrapper>
       <S.Container>
         <S.Text>Ваши подборки:</S.Text>
-        <NavLink to="/Main">
-          Назад
-        </NavLink>
       </S.Container>
     </S.Wrapper>
   </>

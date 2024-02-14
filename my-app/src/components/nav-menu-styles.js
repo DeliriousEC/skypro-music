@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 export const MainNav = styled.div`
 width: 244px;
 background-color: #181818;
-padding: 20px 0 20px 36px;
+padding: 33px 0 20px 36px;
 `;
 
 export const MainCenterblock = styled.div`

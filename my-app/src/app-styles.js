@@ -163,6 +163,8 @@ line-height: 24px;
 letter-spacing: 2px;
 color: #fff;
 text-transform: uppercase;
+padding-top: 30px;
+padding-left: 30px;
 `;  
 
 
